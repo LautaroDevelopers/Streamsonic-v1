@@ -1,1 +1,15 @@
-<h1>Television</h1>
+<div class="cardBox">
+    <% channels.forEach(channel=> { %>
+        <a href="/player/<%= channel.id %>" class="card">
+            <div>
+                <div class="cardName">
+                    <%= channel.name %>
+                </div>
+            </div>
+
+            <div class="iconBx">
+                <img src="<%= channel.logo_url %>" alt="<%= channel.name %> logo" />
+            </div>
+        </a>
+        <% }) %>
+</div>

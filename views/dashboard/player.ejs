@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reproductor - <%= channel.name %>
+    </title>
+</head>
+
+<body>
+    <h1>Reproduciendo: <%= channel.name %>
+    </h1>
+    <video controls autoplay width="100%">
+        <source src="<%= channel.video_url %>" type="application/x-mpegURL">
+        Tu navegador no soporta reproducción de video.
+    </video>
+</body>
+
+</html>

@@ -6,8 +6,17 @@ const { promisify } = require("util");
 //procedimiento para registrarnos
 exports.register = async (req, res) => {
   try {
-    const { name, user, pass, email, phone, department, address, province } =
-      req.body;
+    const {
+      name,
+      user,
+      pass,
+      email,
+      phone,
+      department,
+      address,
+      province,
+      zipcode,
+    } = req.body;
     let passHash = await bcryptjs.hash(pass, 8); // Encriptar la contraseña
 
     // Insertar los datos en la base de datos
@@ -22,6 +31,7 @@ exports.register = async (req, res) => {
         department: department,
         address: address,
         province: province,
+        zipcode: zipcode,
       },
       (error, results) => {
         if (error) {

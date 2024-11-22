@@ -1,5 +1,6 @@
 const express = require("express");
 const router = express.Router();
+const channelController = require("../controllers/channelController");
 
 router.get("/", (req, res) => {
   res.render("layouts/dashboard", {
@@ -22,6 +23,14 @@ router.get("/tv", (req, res) => {
     user: req.user,
     title: "TV",
     body: "../dashboard/tv",
+  });
+});
+
+router.get("/player/:id", channelController.playChannel, (req, res) => {
+  res.render("layouts/dashboard", {
+    user: req.user,
+    title: "Player",
+    body: "../dashboard/player",
   });
 });
 

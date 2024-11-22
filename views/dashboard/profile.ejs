@@ -1,17 +1,57 @@
 <div class="cardBox flex flex-col">
-    <h1 class="text-2xl font-bold">Perfil</h1>
-
+    <h2 class="text-2xl font-bold">Perfil</h2>
     <section class="grid gap-2 grid-cols-2 px-4">
         <div class="flex flex-col">
             <h3 class="text-lg">Nombre y apellido</h3>
             <span class="bg-gray-300 p-2 rounded">
-                <%= user.name.charAt(0).toUpperCase() + user.name.slice(1) %>
+                <%= user.name %>
             </span>
         </div>
         <div class="flex flex-col">
             <h3 class="text-lg">Nombre de usuario</h3>
             <span class="bg-gray-300 p-2 rounded">
-                <%= user.user.charAt(0).toUpperCase() + user.user.slice(1) %>
+                <%= user.user %>
+            </span>
+        </div>
+        <div class="flex flex-col">
+            <h3 class="text-lg">Correo electronico</h3>
+            <span class="bg-gray-300 p-2 rounded">
+                <%= user.email %>
+            </span>
+        </div>
+        <div class="flex flex-col">
+            <h3 class="text-lg">Telefono Celular</h3>
+            <span class="bg-gray-300 p-2 rounded">
+                <%= user.phone %>
+            </span>
+        </div>
+    </section>
+    <h2 class="flex align-center text-2xl font-bold">
+        <ion-icon class="font-bold text-red-900 text-3xl" name="location-outline"></ion-icon> Ubicación
+    </h2>
+    <section class="grid gap-2 grid-cols-2 px-4">
+        <div class="flex flex-col">
+            <h3 class="text-lg">Dirección</h3>
+            <span class="bg-gray-300 p-2 rounded">
+                <%= user.address %>
+            </span>
+        </div>
+        <div class="flex flex-col">
+            <h3 class="text-lg">Departamento</h3>
+            <span class="bg-gray-300 p-2 rounded">
+                <%= user.department %>
+            </span>
+        </div>
+        <div class="flex flex-col">
+            <h3 class="text-lg">Provincia</h3>
+            <span class="bg-gray-300 p-2 rounded">
+                <%= user.province %>
+            </span>
+        </div>
+        <div class="flex flex-col">
+            <h3 class="text-lg">Codigo postal</h3>
+            <span class="bg-gray-300 p-2 rounded">
+                <%= user.zipcode %>
             </span>
         </div>
     </section>
