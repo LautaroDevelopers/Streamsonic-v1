@@ -1,0 +1,15 @@
+<div class="grid grid-cols-3 gap-4">
+    <% channels.forEach(channel=> { %>
+        <div class="card">
+            <a href="/channel/<%= channel.id %>">
+                <img src="<%= channel.logo_url %>" alt="Logo" class="w-full h-32 object-cover">
+                <h3 class="text-xl font-bold">
+                    <%= channel.name %>
+                </h3>
+                <p class="text-gray-500">
+                    <%= channel.category || 'Sin Categoría' %>
+                </p>
+            </a>
+        </div>
+        <% }); %>
+</div>

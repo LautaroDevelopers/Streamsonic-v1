@@ -4,17 +4,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reproductor - <%= channel.name %>
+    <title>Streamsonic - <%= channel.name %>
     </title>
+    <link href="https://vjs.zencdn.net/7.20.3/video-js.css" rel="stylesheet">
+    <script src="https://vjs.zencdn.net/7.20.3/video.min.js"></script>
+
+    <style>
+        #videoPlayerContainer {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 9999;
+            background-color: black;
+        }
+
+        .video-js {
+            width: 100% !important;
+            height: 100% !important;
+        }
+
+        .video-js .vjs-big-play-button {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
 </head>
 
 <body>
-    <h1>Reproduciendo: <%= channel.name %>
-    </h1>
-    <video controls autoplay width="100%">
-        <source src="<%= channel.video_url %>" type="application/x-mpegURL">
-        Tu navegador no soporta reproducción de video.
-    </video>
+
+    <div id="videoPlayerContainer">
+        <video id="videoPlayer" class="video-js vjs-default-skin"></video>
+    </div>
+
+    <script>
+        const player = videojs('videoPlayer', {
+            controls: true,
+            autoplay: true,
+            preload: 'auto',
+            sources: [ { src: '<%= channel.video_url %>', type: 'application/x-mpegURL' } ]
+        });
+
+    </script>
 </body>
 
 </html>
