@@ -43,7 +43,7 @@ exports.register = async (req, res) => {
             alertIcon: "error",
             showConfirmButton: true,
             timer: false,
-            ruta: "/auth/register",
+            ruta: "auth/register",
           });
         }
         res.redirect("/"); // Redirigir después de registrar
@@ -67,7 +67,7 @@ exports.login = async (req, res) => {
         alertIcon: "info",
         showConfirmButton: true,
         timer: false,
-        ruta: "/auth/login",
+        ruta: "auth/login",
       });
     } else {
       conexion.query(
@@ -85,7 +85,7 @@ exports.login = async (req, res) => {
               alertIcon: "error",
               showConfirmButton: true,
               timer: false,
-              ruta: "/auth/login",
+              ruta: "auth/login",
             });
           } else {
             //inicio de sesión OK

@@ -1,28 +1,28 @@
 <div class="cardBox flex flex-col">
     <h2 class="text-2xl font-bold">Perfil</h2>
-    <section class="grid gap-2 grid-cols-2 px-4">
+    <section class="grid gap-2 px-4 grid-cols-1 md:grid-cols-2">
         <div class="flex flex-col">
             <h3 class="text-lg">Nombre y apellido</h3>
             <span class="bg-gray-300 p-2 rounded">
-                <%= user.name %>
+                <%= user.name || 'No ingresado' %>
             </span>
         </div>
         <div class="flex flex-col">
             <h3 class="text-lg">Nombre de usuario</h3>
             <span class="bg-gray-300 p-2 rounded">
-                <%= user.user %>
+                <%= user.user || 'No ingresado' %>
             </span>
         </div>
         <div class="flex flex-col">
             <h3 class="text-lg">Correo electronico</h3>
             <span class="bg-gray-300 p-2 rounded">
-                <%= user.email %>
+                <%= user.email || 'No ingresado' %>
             </span>
         </div>
         <div class="flex flex-col">
             <h3 class="text-lg">Telefono Celular</h3>
             <span class="bg-gray-300 p-2 rounded">
-                <%= user.phone %>
+                <%= user.phone || 'No ingresado' %>
             </span>
         </div>
     </section>
@@ -33,25 +33,25 @@
         <div class="flex flex-col">
             <h3 class="text-lg">Dirección</h3>
             <span class="bg-gray-300 p-2 rounded">
-                <%= user.address %>
+                <%= user.address || 'No ingresado' %>
             </span>
         </div>
         <div class="flex flex-col">
             <h3 class="text-lg">Departamento</h3>
             <span class="bg-gray-300 p-2 rounded">
-                <%= user.department %>
+                <%= user.department || 'No ingresado' %>
             </span>
         </div>
         <div class="flex flex-col">
             <h3 class="text-lg">Provincia</h3>
             <span class="bg-gray-300 p-2 rounded">
-                <%= user.province %>
+                <%= user.province || 'No ingresado' %>
             </span>
         </div>
         <div class="flex flex-col">
             <h3 class="text-lg">Codigo postal</h3>
             <span class="bg-gray-300 p-2 rounded">
-                <%= user.zipcode %>
+                <%= user.zipcode || 'No ingresado' %>
             </span>
         </div>
     </section>

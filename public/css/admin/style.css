@@ -239,16 +239,19 @@ body {
 }
 
 .cardBox .card .cardName {
-  color: var(--black2);
+  color: var(--black1);
   font-size: 1.1rem;
   margin-top: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .cardBox .card .iconBx {
   margin-left: 10px;
   color: var(--black2);
   display: flex;
-  justify-items: center;
+  justify-content: center;
   align-items: center;
 }
 

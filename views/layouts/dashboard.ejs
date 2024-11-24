@@ -27,7 +27,6 @@
                         <span class="title">StreamSonic</span>
                     </a>
                 </li>
-
                 <li>
                     <a href="/">
                         <span class="icon">
@@ -36,7 +35,6 @@
                         <span class="title">Inicio</span>
                     </a>
                 </li>
-
                 <li>
                     <a href="/tv">
                         <span class="icon">
@@ -45,7 +43,6 @@
                         <span class="title">Tv</span>
                     </a>
                 </li>
-
                 <li>
                     <a href="/fm">
                         <span class="icon">
@@ -54,7 +51,6 @@
                         <span class="title">Radios</span>
                     </a>
                 </li>
-
                 <li>
                     <a href="/profile">
                         <span class="icon">
@@ -63,13 +59,12 @@
                         <span class="title">Perfil</span>
                     </a>
                 </li>
-
                 <li>
                     <a href="/auth/logout">
                         <span class="icon">
                             <ion-icon name="log-out-outline"></ion-icon>
                         </span>
-                        <span class="title">Cerrar Sesion</span>
+                        <span class="title">Cerrar Sesión</span>
                     </a>
                 </li>
             </ul>
@@ -84,7 +79,7 @@
 
                 <div class="search">
                     <label>
-                        <input type="text" placeholder="Buscar...">
+                        <input type="text" id="searchInput" placeholder="Buscar...">
                         <ion-icon name="search-outline"></ion-icon>
                     </label>
                 </div>
@@ -102,6 +97,17 @@
 
     <!-- =========== Scripts =========  -->
     <script src="js/main.js"></script>
+    <script>
+        // Toggle navigation
+        const toggle = document.querySelector('.toggle');
+        const navigation = document.querySelector('.navigation');
+        const main = document.querySelector('.main');
+
+        toggle.onclick = () => {
+            navigation.classList.toggle('active');
+            main.classList.toggle('active');
+        };
+    </script>
 
     <!-- ====== ionicons ======= -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
