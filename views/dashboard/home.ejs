@@ -1,3 +1,45 @@
+<style>
+    .slider {
+        width: 100vw;
+        height: 40vh;
+        /* Ajusta la altura máxima del slider */
+        margin: 0;
+        overflow: hidden;
+    }
+
+    .slider img {
+        width: 80%;
+        height: 100%;
+        object-fit: contain;
+        margin: auto auto;
+    }
+
+    .slick-prev,
+    .slick-next {
+        z-index: 1;
+    }
+</style>
+
 <div class="cardBox">
-    <h1>Home</h1>
+    <div class="slider">
+        <div><img src="/img/dashboard/animacion.svg" alt="Imagen 1"></div>
+        <div><img src="/img/dashboard/animacion2.svg" alt="Imagen 2"></div>
+        <div><img src="/img/dashboard/animacion3.svg" alt="Imagen 3"></div>
+    </div>
+
 </div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.slider').slick({
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 2000,
+            arrows: false
+        });
+    });
+</script>

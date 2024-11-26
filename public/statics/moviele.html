@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta http-equiv="Content-Language" content="es" />
+    <meta name="generator" content="televisionalternativa.com.ar" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no" />
+
+    <link rel="shortcut icon" href="../images/Logo.png" type="image/x-icon" />
+
+    <!-- SEO -->
+
+    <title>Fm Televisión Alternativa | Tu Mejor Compañía</title>
+
+    <meta name="description" content="Somos tu mejor Compañia" />
+    <meta
+      name="keywords"
+      content="Todos los Exitos las 24hs, Fm, fm television alternativa, television alternativa, radios en mendoza, radios argentinas, television, innovaciones, tv alternativa, tele alternativa" />
+    <meta name="theme-color" content="#08298a" />
+
+    <!-- SEO Para Redes Sociales -->
+
+    <meta property="og:title" content="Fm Televisión Alternativa" />
+    <meta property="og:description" content="Tu Mejor Compañía" />
+    <meta property="og:image" content="../images/Logo.png" />
+
+    <!-- Fin SEO Para Redes Sociales -->
+    <!-- Fin SEO -->
+
+    <link href="../css/style.css" rel="stylesheet" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="../js/lunaradio-animado.js"></script>
+
+    <!-- Validación para Google CEO -->
+
+    <style>
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        color: #272829;
+      }
+      body,
+      html {
+        font-family: "Poppins" !important;
+        font-weight: 500;
+        font-style: italic;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div style="height: 100%">
+      <div id="player"></div>
+      <script>
+        $("#player").lunaradio({
+          userinterface: "big",
+          backgroundcolor: "rgba(9,15,25,0.8)",
+          fontcolor: "#ffffff",
+          fontname: "Poppins",
+          googlefont: "Poppins:wght@500",
+          fontratio: "0.4",
+          radioname: "Fm Television Alternativa",
+          offlinetext: "Sin conección a internet",
+          scroll: "true",
+          scrollradioname: "left",
+          scrolltitle: "left",
+          coverimage: "../images/Logo.png",
+          onlycoverimage: "false",
+          coverstyle: "animated",
+          usevisualizer: "real",
+          visualizertype: "6",
+          itunestoken: "1000lIPN",
+          metadatatechnic: "fallback", //fallback (usar para zeno)
+          corsproxy: "",
+          usestreamcorsproxy: "false",
+          streamurl: "https://stream.zeno.fm/b6428upqws8uv",
+          streamtype: "zeno", //soporta: zeno, icecast2, shoutcast2
+          idzeno: "b6428upqws8uv",
+          icecastmountpoint: "",
+          shoutcastpath: "",
+          shoutcastid: "1",
+          metadatainterval: "26000",
+          volume: "50",
+          debug: "false",
+          autoplay: "true",
+          displayliveicon: "true",
+          visualizeropacity: "1.0",
+          multicolorvisualizer: "true",
+          color1: "#00FF00",
+          color2: "#ffff00",
+          color3: "#FF1F6F",
+          color4: "#FF1F6F",
+        });
+      </script>
+
+      <div class="background_hora"><div id="relogio"></div></div>
+      <script>
+        function reloj() {
+          let elementoID = document.getElementById("relogio");
+          let horalocal = new Date().toLocaleTimeString("es");
+          elementoID.innerHTML = horalocal;
+        }
+        setInterval(reloj, 1000);
+      </script>
+    </div>
+
+    <footer style="display: grid; align-content: end">
+      <div
+        style="
+          background-color: #f86808;
+          color: #fff;
+          text-align: center;
+          padding: 10px;
+        ">
+        &copy; Copyright 2024 -
+        <a target="_blank" href="http://www.televisionalternativa.com.ar/"
+          >Televisión Alternativa</a
+        >
+        &
+        <a
+          href="http://lautarodevelopers.netlify.app"
+          target="_blank"
+          rel="noopener noreferrer"
+          >LautaroDevelopers</a
+        >
+      </div>
+    </footer>
+
+  </body>
+</html>
